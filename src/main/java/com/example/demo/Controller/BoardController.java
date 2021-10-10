@@ -1,6 +1,7 @@
 package com.example.demo.Controller;
 
 import com.example.demo.Service.BoardService;
+import com.example.demo.database.dto.BoardDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,5 +17,10 @@ public class BoardController {
     @RequestMapping("/")
     public String MainPage(Model model) {
         return boardService.MainPage(model);
+    }
+
+    @RequestMapping("/view")
+    public String ViewPage(Model model, BoardDTO dto) {
+        return boardService.ViewPage(model, dto);
     }
 }

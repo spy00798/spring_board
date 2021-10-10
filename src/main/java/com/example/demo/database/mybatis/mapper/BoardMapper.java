@@ -9,4 +9,5 @@ import java.util.List;
 public interface BoardMapper {
 
     List<BoardDTO> findAll();
+    BoardDTO findById(BoardDTO params);
 }

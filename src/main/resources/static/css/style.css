@@ -1,0 +1,7 @@
+*{margin:0; padding:0;}
+table tbody tr th a{text-decoration: none; color: inherit;}
+table tbody tr th a:hover{text-decoration: underline; color: inherit;}
+textarea{width: 400px; height: 200px; resize: none;}
+.list_btn, .up_btn{width: 80px; height: 30px; background: #1183f5; color: white; margin: 10px 5px;}
+.del_btn{width: 80px; height: 30px; background: #ff1f1f; color: white; margin: 10px 5px;}
+.list_btn a, .del_btn a, .up_btn a{color: white; text-decoration: none;}

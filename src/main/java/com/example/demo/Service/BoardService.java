@@ -1,5 +1,6 @@
 package com.example.demo.Service;
 
+import com.example.demo.database.dto.BoardDTO;
 import com.example.demo.database.mybatis.mapper.BoardMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -14,6 +15,11 @@ public class BoardService {
     public String MainPage(Model model) {
         model.addAttribute("boardList", boardMapper.findAll());
         return "index";
+    }
+
+    public String ViewPage(Model model, BoardDTO dto) {
+        model.addAttribute("boardView", boardMapper.findById(dto));
+        return "view";
     }
 
 }

@@ -7,5 +7,9 @@
         SELECT idx, bd_name, bd_writer, date_format(bd_date, '%Y-%m-%d') as bd_date from tbl_board
     </select>
 
+    <select id="findById" parameterType="com.example.demo.database.dto.BoardDTO" resultType="com.example.demo.database.dto.BoardDTO">
+        SELECT idx, bd_name, bd_writer, bd_content,
+               date_format(bd_date, '%Y-%m-%d') as bd_date from tbl_board where idx = #{idx}
+    </select>
 
 </mapper>
