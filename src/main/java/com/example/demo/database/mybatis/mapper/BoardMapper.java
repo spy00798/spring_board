@@ -10,4 +10,7 @@ public interface BoardMapper {
 
     List<BoardDTO> findAll();
     BoardDTO findById(BoardDTO params);
+    void updateById(BoardDTO params);
+    void deleteById(BoardDTO params);
+    void createOne(BoardDTO params);
 }

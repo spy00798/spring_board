@@ -19,7 +19,36 @@ public class BoardService {
 
     public String ViewPage(Model model, BoardDTO dto) {
         model.addAttribute("boardView", boardMapper.findById(dto));
+        System.out.println(dto.getBd_name());
         return "view";
+    }
+
+    public String UpdateForm(Model model, BoardDTO dto) {
+        model.addAttribute("boardView", boardMapper.findById(dto));
+
+        return "update";
+    }
+
+    public String UpdateAction(BoardDTO dto) {
+        boardMapper.updateById(dto);
+
+        return "redirect:/";
+    }
+
+    public String DeleteAction(BoardDTO dto) {
+        boardMapper.deleteById(dto);
+
+        return "redirect:/";
+    }
+
+    public String InsertForm() {
+        return "insert";
+    }
+
+    public String InsertAction(BoardDTO dto) {
+        boardMapper.createOne(dto);
+
+        return "redirect:/";
     }
 
 }

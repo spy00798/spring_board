@@ -12,36 +12,34 @@
     <link rel="stylesheet" href="resources/css/style.css">
 </head>
 <body>
-<form method="post">
+<form action="/insert.do" method="post">
     <table border="1">
         <thead>
         <tr>
             <th>작성자</th>
-            <td>${boardView.bd_writer}</td>
+            <td><input type="text" name="bd_writer"></td>
             <th>작성일</th>
-            <td>${boardView.bd_date}</td>
+            <td><input type="text" name="bd_date"></td>
         </tr>
         </thead>
         <tbody>
         <tr>
             <td colspan="2">제목</td>
-            <td colspan="2">${boardView.bd_name}</td>
+            <td colspan="2"><input type="text" name="bd_name"></td>
         </tr>
         <tr>
             <td colspan="2">내용</td>
             <td colspan="2">
-                <textarea readonly>${boardView.bd_content}</textarea>
+                <textarea name="bd_content"></textarea>
             </td>
         </tr>
         <tr>
             <td colspan="4">
-                <button class="list_btn"><a href="/">홈으로</a></button>
-                <button class="up_btn"><a href="/update?idx=${boardView.idx}">수정</a></button>
+                <button class="list_btn">완료</button>
             </td>
         </tr>
         </tbody>
     </table>
 </form>
-    <button class="del_btn"><a href="/delete?idx=${boardView.idx}" methods="post">삭제</a></button>
 </body>
 </html>

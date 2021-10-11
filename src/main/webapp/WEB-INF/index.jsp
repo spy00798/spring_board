@@ -39,5 +39,6 @@
             </c:forEach>
         </tbody>
     </table>
+    <button><a href="/insert">등록</a></button>
 </body>
 </html>
